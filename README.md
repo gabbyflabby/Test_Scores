@@ -45,7 +45,7 @@ Read on to see what we got!
 
 #### Null values
 
-<img src="Images/Columns_and_nulls.png">
+<img src="Images/Columns_and_nulls.png" style="width:300px;height:140px" align="left">
 
 
 #### Outliers
