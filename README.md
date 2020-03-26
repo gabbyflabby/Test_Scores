@@ -101,7 +101,7 @@ Avergae score for students with
 
 #### Average reading score for students of different races
 We were unable to perform Anova testing since some of the races in our dataset are not presented with enough datapoints
-<img src="Images/Races_and_mean_scores.png">
+<img src="Images/Races_and_mean_scores.textClipping">
 
 ## Regression Model
 
