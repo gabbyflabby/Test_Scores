@@ -1,5 +1,6 @@
 # mod2project
 
+## About
 
 #### Source:
 We took our data from a MIT course assignment linked here.
@@ -37,5 +38,21 @@ Our subset contains information about the demographics and schools for American 
 * readingScore: The student's reading score, on a 1000-point scale
 
 #### Goal:
-We will try to predict the reading scores of students from the United States of America on the 2009 PISA exam.
- 
+We will try to predict the reading scores of students from the United States of America on the 2009 PISA exam. Using Linear Regression models such as OLS (ordinary least squares), Polynomials, Ridge, and Lasso.
+Read on to see what we got! 
+
+## Preprocessing
+
+#### Null values
+
+! (Images/Columns_and_nulls.png)
+
+
+#### Outliers
+
+
+
+
+## Exploratory Data Analysis
+
+
