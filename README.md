@@ -45,7 +45,7 @@ Read on to see what we got!
 
 #### Null values
 In the image below you can see the columns with the count of null values and what percentage of that column is null.
-<img src="Images/Columns_and_nulls.png" style="width:300px;height:140px" align="left">
+<img src="Images/Columns_and_nulls.png" style="width:150px;height:70px" align="center">
 
 As you can see the columns about if the parents have a bachelor degree has more than 10% null values. There is a risk that these parents were simply embarassed and therefore did not provide their information, therefore, if we simply drop these nulls we may be introducing some bias to our datasets. We concluded it was best to drop these two columns.
 For the rest of the dataset, we simply dropped the rows with null values.
