@@ -44,13 +44,21 @@ Read on to see what we got!
 ## Preprocessing
 
 #### Null values
-
+In the image below you can see the columns with the count of null values and what percentage of that column is null.
 <img src="Images/Columns_and_nulls.png" style="width:300px;height:140px" align="left">
+
+As you can see the columns about if the parents have a bachelor degree has more than 10% null values. There is a risk that these parents were simply embarassed and therefore did not provide their information, therefore, if we simply drop these nulls we may be introducing some bias to our datasets. We concluded it was best to drop these two columns.
+For the rest of the dataset, we simply dropped the rows with null values.
 
 
 #### Outliers
 
-
+Since our dataset included some extreme outliers we went with a conventional route of removing them.
+We found our Upper fence and Lower fence and removed everything outside of them.
+the formula is:
+Upper fence = Q3 + (1.5 * IQR)
+Lower fence = Q1 – (1.5 * IQR)
+Where IQR is the interquartile range
 
 
 ## Exploratory Data Analysis
