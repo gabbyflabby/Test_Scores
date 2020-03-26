@@ -55,12 +55,83 @@ For the rest of the dataset, we simply dropped the rows with null values.
 
 Since our dataset included some extreme outliers we went with a conventional route of removing them.
 We found our Upper fence and Lower fence and removed everything outside of them.
-the formula is:
+The formula is:
 Upper fence = Q3 + (1.5 * IQR)
 Lower fence = Q1 – (1.5 * IQR)
 Where IQR is the interquartile range
 
 
 ## Exploratory Data Analysis
+
+???
+insert images
+
+
+## Hypothesis Testing
+
+#### Students with working parents vs non working parents
+Does having both parents who don't work influence the childs reading score?
+We've found a statistical significant difference between the mean reading scores for those with working parents vs without.
+Average score for students with at least one working parent:
+Avergae score for students with parents who don't work: 
+
+#### Students who speak english at home vs those who do not
+This one seems quite logical, if the language spoken at home is not English will that affect the childs reading score?
+We've found a statistical significant difference between the mean reading scores for those who speak English at home vs those who don't.
+Average score for students who speak english at home:
+Avergae score for students who don't speak english at home:
+
+#### Students with a parent that graduated high school vs those without one
+If a student has a parent with a high school diploma will that student perform differently on the reading test?
+As it turns out that student will indeed perform differently on average.
+Average score for students with a parent who graduated High school:
+Avergae score for students with parents who didn't graduate High school:
+
+#### Students who attend public school vs those who don't
+Public vs Private school will there students perform the same on the reading test?
+Well we can assure you that according to our data they will not perform the same on average.
+Average score for students from Public schools:
+Avergae score for students from Private schools:
+
+#### Students with a parent from the US vs those without one
+If a students parents are not from the US will that have an influence on that students reading score?
+
+Average score for students with
+Avergae score for students with
+
+#### Average reading score for students of different races
+We were unable to perform Anova testing since some of the races in our dataset are not presented with enough datapoints
+<img src="Images/Races_and_mean_scores.png">
+
+## Regression Model
+
+#### OLS
+
+R squared:
+RMSE: 
+
+#### Polynomial
+
+R squared:
+RMSE: 
+
+#### Ridge
+
+R squared:
+RMSE:
+
+#### Lasso
+
+R squared:
+RMSE: 
+
+
+
+## Conclusion & next steps
+
+Being that most of the collected data is binary or categorical it seems that a linear model won't be sufficient to predict student test scores. 
+
+
+
 
 
