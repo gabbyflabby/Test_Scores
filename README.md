@@ -164,12 +164,14 @@ Next, we thought it might be useful to split up the categorical and the continuo
 Below is a summary of the results we got from these models.
 <img src="Images/ols_models.png">
 
-#### Polynomial
-We decided to try out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors, with
-R squared:
-RMSE: 
+###  Polynomial
+We decided to try out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors.
 
-#### Ridge
+<img src="Images/polynomial_models.png">
+
+As you can see, we could get better (albeit not good) results by choosing a higher order polynomial model. However our testing results only got worse, meaning we are overfitting our data.
+
+### Ridge
 
 R squared:
 RMSE:
