@@ -77,6 +77,9 @@ In the image below you can see the columns with the count of null values and wha
 As you can see the columns about if the parents have a bachelor degree has more than 10% null values. There is a risk that these parents were simply embarassed and therefore did not provide their information, therefore, if we simply drop these nulls we may be introducing some bias to our datasets. We concluded it was best to drop these two columns.
 For the rest of the dataset, we simply dropped the rows with null values.
 
+### Categorical Features
+
+Besides all of our dummy variables, there were two categorical variables. Of these, `raceeth` was made up of string values. To be able to work with this data, we created dummy variables for this column.
 
 ### Outliers
 
@@ -140,21 +143,26 @@ We calculated a 95% confidence interval of 350.98 - 696.12.
 
     See: Regression Model.ipynb
 
-Plotting our continuous features against our target, we can clearly see no linear relationship exists.
+Our first step in model building was looking for multicollinearity. We found `motherBornUS` and `fatherBornUS` to be highly correlated. To pick which one to remove, we looked for which has a smaller correlation with our target variable. 
+
+Next, we needed to choose which one of our dummy variable columns to drop to avoid redundancy. To pick which one to drop we followed the same step of looking for lowest correlation with target variable.
+
+As mentioned in our EDA, we had 3 continuous features to work with. We plotted these against our target, and saw that no linear relationship exists.
 <img src="Images/Scatterplots_continuous_features.png">
 
-Continuous features are: minutesPerWeekEnglish, studentInEnglish, schoolSize
-Categorical features are all the rest.
+We also saw they had non-normal distributions with very differnt ranges.
 
-#### OLS
-We built two ols models one for our continuous data and one for our categorical data.
-For the continuous data we consistently got a very bad score with:
-R squared:
-RMSE: 
-In addition, to our surprise the amount of minutes a student studied English in class did not contribute well to our model. With a P value of: <<<<<<<<<<<<<<<<<<<<< fill in >>>>>>>>>>>>>>
-For our caterogical model we got a better score, and took out some features with higher P values
-R squared:
-RMSE: 
+Our next step was to split the data into a training, testing, and validation set. We then created a scaler from the training set and used it to scale all three sets. This standardized our continuous variables and helped make our results more trustworthy.
+
+### OLS
+For our first model, we used all of the features in our dataset.
+
+The results of our first model showed many features with high p-values. For our second model, we removed any variable which had a p-value higher than 0.5 in our first model. These removed variables were: `preschool`, `motherWork`, `selfBornUS`, `fatherBornUS`, `Morethannorace`, and `minutesPerWeekEnglishscaled`.
+
+Next, we thought it might be useful to split up the categorical and the continuous variables into two models. 
+
+Below is a summary of the results we got from these models.
+<img src="Images/ols_models.png">
 
 #### Polynomial
 We decided to try out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors, with
