@@ -38,8 +38,8 @@ Our subset contains information about the demographics and schools for American 
 * readingScore: The student's reading score, on a 1000-point scale
 
 #### Goal:
-We will try to predict the reading scores of students from the United States of America on the 2009 PISA exam. Using Linear Regression models such as OLS (ordinary least squares), Polynomials, Ridge, and Lasso.
-Read on to see what we got! 
+We will try to predict the reading scores of students from the US on the 2009 PISA exam. Using Linear Regression models such as OLS (ordinary least squares), Polynomials, Ridge, and Lasso.
+
 
 ## Preprocessing
 
@@ -63,34 +63,36 @@ Where IQR is the interquartile range
 
 ## Exploratory Data Analysis
 
-???
-insert images
-__scatter plot showing the continuous data and our target variable, show that there is no linearity__
-
+We plotted our continuous features against readingScore and can clearly see no linear relationship exists here
+<img src="Images/Scatterplots_continuous_features.png">
 
 ## Hypothesis Testing
 
 #### Students with working parents vs non working parents
 Does having both parents who don't work influence the childs reading score?
-We've found a statistical significant difference between the mean reading scores for those with working parents vs without.
-Average score for students with at least one working parent: 524.81
-Avergae score for students with parents who don't work: 495.77
+We've found a statistical significant difference between the mean reading scores for those with working parents vs without.  
+
+Average score for students with at least one working parent: 524.81                                                        
+Avergae score for students with parents who don't work: 495.77             
 
 #### Students who speak english at home vs those who do not
 This one seems quite logical, if the language spoken at home is not English will that affect the childs reading score?
 We've found a statistical significant difference between the mean reading scores for those who speak English at home vs those who don't.
-Average score for students who speak english at home: 527.25
+
+Average score for students who speak english at home: 527.25                                               
 Avergae score for students who don't speak english at home: 494.63
 
 #### Students with a parent that graduated high school vs those without one
 If a student has a parent with a high school diploma will that student perform differently on the reading test?
 As it turns out that student will indeed perform differently on average.
+
 Average score for students with a parent who graduated High school: 526.37
 Avergae score for students with parents who didn't graduate High school: 478.93
 
 #### Students who attend public school vs those who don't
 Public vs Private school will there students perform the same on the reading test?
 Well we can assure you that according to our data they will not perform the same on average.
+
 Average score for students from Public schools: 520.63
 Avergae score for students from Private schools: 551.61
 
