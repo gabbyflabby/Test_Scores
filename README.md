@@ -147,12 +147,12 @@ R Squared: -0.007
 
 The performance of our Ridge cv
 Training Data
-RMSE: 75.78768689631224
-R Squared: 0.26657035121327466
+RMSE: 75.78
+R Squared: 0.26
 
 Testing Data
-RMSE: 74.81643486418044
-R Squared: 0.3170507122247701
+RMSE: 74.81
+R Squared: 0.31
 
 #### Lasso
 
