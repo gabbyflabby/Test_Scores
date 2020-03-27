@@ -87,20 +87,20 @@ If a student has a parent with a high school diploma will that student perform d
 As it turns out that student will indeed perform differently on average.
 
 Average score for students with a parent who graduated High school: 526.37
-Avergae score for students with parents who didn't graduate High school: 478.93
+Average score for students with parents who didn't graduate High school: 478.93
 
 #### Students who attend public school vs those who don't
 Public vs Private school will there students perform the same on the reading test?
 Well we can assure you that according to our data they will not perform the same on average.
 
-Average score for students from Public schools: 520.63
-Avergae score for students from Private schools: 551.61
+Average score for students from Public schools: 520.63                                              
+Average score for students from Private schools: 551.61
 
 #### Students with a parent from the US vs those without one
 If a students parents are not from the US will that have an influence on that students reading score?
 
-Average score for students with a parent born in the US: 526.95
-Avergae score for students with parents born outside of the US: 507.19
+Average score for students with a parent born in the US: 526.95                                              
+Average score for students with parents born outside of the US: 507.19
 
 #### Average reading score for students of different races
 We were unable to perform Anova testing since some of the races in our dataset are not presented with enough datapoints
