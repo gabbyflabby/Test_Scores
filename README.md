@@ -65,6 +65,7 @@ Where IQR is the interquartile range
 
 ???
 insert images
+__scatter plot showing the continuous data and our target variable, show that there is no linearity__
 
 
 ## Hypothesis Testing
@@ -72,46 +73,54 @@ insert images
 #### Students with working parents vs non working parents
 Does having both parents who don't work influence the childs reading score?
 We've found a statistical significant difference between the mean reading scores for those with working parents vs without.
-Average score for students with at least one working parent:
-Avergae score for students with parents who don't work: 
+Average score for students with at least one working parent: 524.81
+Avergae score for students with parents who don't work: 495.77
 
 #### Students who speak english at home vs those who do not
 This one seems quite logical, if the language spoken at home is not English will that affect the childs reading score?
 We've found a statistical significant difference between the mean reading scores for those who speak English at home vs those who don't.
-Average score for students who speak english at home:
-Avergae score for students who don't speak english at home:
+Average score for students who speak english at home: 527.25
+Avergae score for students who don't speak english at home: 494.63
 
 #### Students with a parent that graduated high school vs those without one
 If a student has a parent with a high school diploma will that student perform differently on the reading test?
 As it turns out that student will indeed perform differently on average.
-Average score for students with a parent who graduated High school:
-Avergae score for students with parents who didn't graduate High school:
+Average score for students with a parent who graduated High school: 526.37
+Avergae score for students with parents who didn't graduate High school: 478.93
 
 #### Students who attend public school vs those who don't
 Public vs Private school will there students perform the same on the reading test?
 Well we can assure you that according to our data they will not perform the same on average.
-Average score for students from Public schools:
-Avergae score for students from Private schools:
+Average score for students from Public schools: 520.63
+Avergae score for students from Private schools: 551.61
 
 #### Students with a parent from the US vs those without one
 If a students parents are not from the US will that have an influence on that students reading score?
 
-Average score for students with
-Avergae score for students with
+Average score for students with a parent born in the US: 526.95
+Avergae score for students with parents born outside of the US: 507.19
 
 #### Average reading score for students of different races
 We were unable to perform Anova testing since some of the races in our dataset are not presented with enough datapoints
-<img src="Images/Races_and_mean_scores.textClipping">
+<img src="Images/Races_and_mean_scores.png">
 
 ## Regression Model
 
-#### OLS
+Continuous features are: minutesPerWeekEnglish, studentInEnglish, schoolSize
+Categorical features are all the rest.
 
+#### OLS
+We built two ols models one for our continuous data and one for our categorical data.
+For the continuous data we consistently got a very bad score with:
+R squared:
+RMSE: 
+In addition, to our surprise the amount of minutes a student studied English in class did not contribute well to our model. With a P value of: <<<<<<<<<<<<<<<<<<<<< fill in >>>>>>>>>>>>>>
+For our caterogical model we got a better score, and took out some features with higher P values
 R squared:
 RMSE: 
 
 #### Polynomial
-
+We decided to try out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors, with
 R squared:
 RMSE: 
 
