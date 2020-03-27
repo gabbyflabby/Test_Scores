@@ -112,29 +112,58 @@ Continuous features are: minutesPerWeekEnglish, studentInEnglish, schoolSize
 Categorical features are all the rest.
 
 #### OLS
-We built two ols models one for our continuous data and one for our categorical data.
-For the continuous data we consistently got a very bad score with:
-R squared:
-RMSE: 
-In addition, to our surprise the amount of minutes a student studied English in class did not contribute well to our model. With a P value of: <<<<<<<<<<<<<<<<<<<<< fill in >>>>>>>>>>>>>>
-For our caterogical model we got a better score, and took out some features with higher P values
-R squared:
-RMSE: 
+We started with building a ols model which considers all of our features, which resulted with
+R squared: 	0.271
+Training Data RMSE: 75.54                                                                             
+Validation Data RMSE: 70.27                               
+Some feature P values were high so we couldn't rely on them as predictors. To our surprise, the amount of minutes a student studied English in class did not contribute well to our model, with a P value of: 0.647
+These are the features with a high P value which we removed from our model, "preschool, motherWork, selfBornUS, fatherBornUS, Morethanonerace, minutesPerWeekEnglishscaled"
+The performance of this model stayed about equal, with
+R squared: 0.271
+Training Data RMSE: 75.55
+Validation Data RMSE: 70.21
+
+After inspecting the data once more, we concluded to make a ols model on just the caterogical features. This model didn't perform too well with 
+R squared: 0.262
+Training Data RMSE: 76.02
+Validation Data RMSE: 70.62
+The performance of an ols just on the continuous, was even worse, with
+R squared: 0.002
+Training Data RMSE: 88.40
+Validation Data RMSE: 82.44
 
 #### Polynomial
-We decided to try out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors, with
-R squared:
-RMSE: 
+We tried out a polynomial model for our continuous variables and once again confirmed that these features are not good predictors, with
+Training Data
+RMSE: 87.79
+R Squared: 0.015
+
+Validation Data
+RMSE: 82.81
+R Squared: -0.007
+
 
 #### Ridge
 
-R squared:
-RMSE:
+The performance of our Ridge cv
+Training Data
+RMSE: 75.78768689631224
+R Squared: 0.26657035121327466
+
+Testing Data
+RMSE: 74.81643486418044
+R Squared: 0.3170507122247701
 
 #### Lasso
 
-R squared:
-RMSE: 
+The performance of the Lasso
+Training Data
+RMSE: 75.81
+R Squared: 0.26
+
+Testing Data
+RMSE: 74.96
+R Squared: 0.31
 
 
 
