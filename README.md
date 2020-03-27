@@ -72,7 +72,7 @@ To predict the reading scores of students from the US on the 2009 PISA exam usin
 
 ### Null values
 In the image below you can see the columns with the count of null values and what percentage of that column is null.
-<img src="Images/Columns_and_nulls.png" style="width:100px;height:50px" align="center">
+<img src="Images/Columns_and_nulls.png" style="width:50px;height:25px" align="center">
 
 As you can see the columns about if the parents have a bachelor degree has more than 10% null values. There is a risk that these parents were simply embarassed and therefore did not provide their information, therefore, if we simply drop these nulls we may be introducing some bias to our datasets. We concluded it was best to drop these two columns.
 For the rest of the dataset, we simply dropped the rows with null values.
@@ -133,7 +133,7 @@ Average score for students with parents born outside of the US: 507.19
 
 ### Average reading score for students of different races
 We were unable to perform Anova testing for this since some of the races in our dataset are not presented with enough datapoints. However, to visualize the difference between these in our data, we've included the plot below.
-<img src="Images/Races_and_mean_scores.png" style="width:100px;height:50px" align="center">
+<img src="Images/Races_and_mean_scores.png" style="width:50px;height:25px" align="center">
 
 ### 95% Confidence Interval for Mean of Population Reading Score
 
@@ -171,21 +171,29 @@ We decided to try out a polynomial model for our continuous variables and once a
 
 As you can see, we could get better (albeit not good) results by choosing a higher order polynomial model. However our testing results only got worse, meaning we are overfitting our data.
 
-### Ridge
+### Ridge and Lasso
 
-R squared:
-RMSE:
+<img src="Images/regression_models.png">
 
-#### Lasso
+We got very similar values for our regularization models.
 
-R squared:
-RMSE: 
+Additionally, we used the Lasso model to identify which features were unimportant by seeing which had a coefficient of zero. These were: `preschool`, `motherWork`, `selfBornUS`, `fatherBornUS`, `Morethannorace`, and `minutesPerWeekEnglishscaled`. We are happy to see these were the values we deemed less important in our second OLS model.
 
 
+## Conclusion & Next Steps
 
-## Conclusion & next steps
+In the end, we weren't able to find a good linear regression model for this dataset. This is probably because most of the collected data is categorical, and our continuous variables did not have a linear relationship with the target variables. As such, it seems that a linear model won't be sufficient to predict student test scores with this data. 
 
-Being that most of the collected data is binary or categorical it seems that a linear model won't be sufficient to predict student test scores. 
+Our model with the smallest Root Mean Squared Error (RMSE) is our second OLS Model. From this model's results, we can see that the variables with the biggest impact (lowest p-value, highest coefficient) are:
+* `expectBachelors`
+* `read30MinsADay`
+* `Black`
+
+Possible ways to continue this project:
+* Complete hypothesis tests on the rest of the groups
+* Complete an ANOVA test for the different grades
+* Improve OLS model by developing new continuous features
+ 
 
 
 
